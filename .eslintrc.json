@@ -1,23 +1,24 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true,
-        "jest": true
-    },
-    "extends": [
-        "plugin:prettier/recommended"
-    ],
-    "plugins": [
-        "prettier",
-        "jest"
-    ],
-    "overrides": [
-    ],
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "rules": {
-        "prettier/prettier": "error"
-    }
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "prettier",
+    "jest"
+  ],
+  "overrides": [
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }

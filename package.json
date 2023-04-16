@@ -1,5 +1,5 @@
 {
-  "name": "payever-assessment",
+  "name": "boilerplate-typescript-jest",
   "version": "1.0.0",
   "main": "main/dist/server.js",
   "author": "Rafael Cavalcante",
@@ -26,5 +26,14 @@
     "ts-jest": "^29.1.0",
     "tsc": "^2.0.4",
     "typescript": "*"
+  },
+  "scripts": {
+    "build:compile": "tsc -p tsconfig-build.json",
+    "build": "rimraf dist && yarn build:compile",
+    "test": "jest --silent --runInBand --noStackTrace --passWithNoTests",
+    "test:unit": "yarn test --watch -c jest-unit.config.ts",
+    "test:integration": "yarn test --watch -c jest-integration.config.ts",
+    "test:cov": "rimraf coverage && yarn test --coverage",
+    "test:staged": "yarn test --findRelatedTests $(git status --short | awk '{print $2}')"
   }
 }

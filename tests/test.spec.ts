@@ -1,5 +1,7 @@
+import { helloWorld } from '@/main'
+
 describe('Test', () => {
   it('should work', () => {
-    expect(1).toBe(1)
+    expect(helloWorld('Hello World!')).toBe('Hello World!')
   })
 })
